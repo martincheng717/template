@@ -28,7 +28,7 @@ body = """
         - **({{commit.scope}})**{% if commit.breaking %} [**breaking**]{% endif %} \
             {{ commit.message|trim }} - ([{{ commit.id | truncate(length=7, end="") }}]($REPO/commit/{{ commit.id }})) - {{ commit.author.name }}
     {%- endfor -%}
-    {% raw %}\n{% endraw %}\
+    \n
     {%- for commit in commits %}
         {%- if commit.scope -%}
         {% else -%}
